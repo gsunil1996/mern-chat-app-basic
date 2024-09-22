@@ -8,10 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target:
-          import.meta.env.MODE === "development"
-            ? "http://localhost:5000"
-            : "https://mern-chat-app-zyhy.onrender.com",
+        target: "http://localhost:5000",
       },
     },
   },
